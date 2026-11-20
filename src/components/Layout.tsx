@@ -74,15 +74,23 @@ export default function Layout() {
               ]
             },
             {
-              title: "Contact",
+              title: "Social Media",
               links: [
                 {
-                  text: "Get in Touch",
-                  href: "#contact-plum-form"
+                  text: "Concierge Page",
+                  href: "https://www.compass.com/concierge"
                 },
                 {
-                  text: "Concierge Page",
-                  href: "#"
+                  text: "Facebook",
+                  href: "https://facebook.com"
+                },
+                {
+                  text: "Instagram",
+                  href: "https://instagram.com"
+                },
+                {
+                  text: "LinkedIn",
+                  href: "https://linkedin.com"
                 }
               ]
             }
