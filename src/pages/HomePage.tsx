@@ -62,7 +62,7 @@ export default function HomePage() {
             {
               title: "Relocation Help",
               description: "Trusted local contacts for inter-island shipping, moving, and settling in.",
-              imageSrc: "https://img.b2bpic.net/free-photo/patio-balcony-with-chair-around-sea-ocean-view_74190-6863.jpg?_wi=2",
+              imageSrc: "https://images.pexels.com/photos/7464676/pexels-photo-7464676.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
               imageAlt: "Hawaii luxury home relocation"
             },
             {
@@ -88,25 +88,25 @@ export default function HomePage() {
             {
               title: "Kona Coast",
               description: "5 min",
-              imageSrc: "https://img.b2bpic.net/free-photo/beautiful-tropical-coconut-palm-tree-with-chair-around-beach-sea-ocean-with-white-cloud-blue-sky_74190-13652.jpg?_wi=2",
+              imageSrc: "https://images.pexels.com/photos/6965499/pexels-photo-6965499.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
               imageAlt: "Kona Coast beach ocean view"
             },
             {
               title: "Golf Resort",
               description: "12 min",
-              imageSrc: "https://img.b2bpic.net/free-photo/photorealistic-wooden-house-with-timber-structure_23-2151302632.jpg?_wi=2",
+              imageSrc: "https://images.pexels.com/photos/9394297/pexels-photo-9394297.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
               imageAlt: "Tropical beach house resort"
             },
             {
               title: "Town Center",
               description: "18 min",
-              imageSrc: "https://img.b2bpic.net/free-photo/interior-space-decorated-boho-style_23-2150771513.jpg?_wi=2",
+              imageSrc: "https://images.pexels.com/photos/6297086/pexels-photo-6297086.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
               imageAlt: "Luxury living space interior"
             },
             {
               title: "Kona Airport",
               description: "25 min",
-              imageSrc: "https://img.b2bpic.net/free-photo/park-view_93675-130008.jpg?_wi=2",
+              imageSrc: "https://images.pexels.com/photos/34710864/pexels-photo-34710864.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
               imageAlt: "Lush tropical grounds"
             }
           ]}
