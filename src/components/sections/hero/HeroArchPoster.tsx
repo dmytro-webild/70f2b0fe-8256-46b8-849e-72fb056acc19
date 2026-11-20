@@ -43,7 +43,7 @@ const HeroArchPoster = ({
   labelLeft = "A place",
   labelRight = "to return to",
   marquee = ["By day", "By night"],
-  imageSrc = "https://images.pexels.com/photos/35495060/pexels-photo-35495060.jpeg?auto=compress&cs=tinysrgb&w=1920",
+  imageSrc = "https://images.pexels.com/photos/39190674/pexels-photo-39190674.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
   imageAlt = "",
   cta = { text: "Book a stay", href: "#contact" },
   intro = true,

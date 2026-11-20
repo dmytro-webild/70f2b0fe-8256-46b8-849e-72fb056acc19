@@ -21,7 +21,7 @@ export default function HomePage() {
             "Local Market",
             "Island Life"
           ]}
-          imageSrc="https://img.b2bpic.net/free-photo/front-view-real-estate-agent-working_23-2150322086.jpg?_wi=1"
+          imageSrc="https://images.pexels.com/photos/4321535/pexels-photo-4321535.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
           imageAlt="Brynn Bailey, REALTOR® | Compass Big Island"
           cta={{
             text: "Browse Listings",
@@ -44,35 +44,35 @@ export default function HomePage() {
             {
               title: "Targeted Search",
               description: "Custom filters and island listings aligned with your lifestyle criteria.",
-              imageSrc: "https://img.b2bpic.net/free-photo/front-view-real-estate-agent-working_23-2150322086.jpg?_wi=2",
+              imageSrc: "https://images.pexels.com/photos/7641834/pexels-photo-7641834.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
               imageAlt: "Brynn Bailey real estate targeted search"
             },
             {
               title: "Contract Terms",
               description: "Focused strategy to secure fair purchase terms and clear closing conditions.",
-              imageSrc: "https://img.b2bpic.net/free-photo/business-meeting-sales-manager-couple-customers_1262-20845.jpg",
+              imageSrc: "https://images.pexels.com/photos/40895087/pexels-photo-40895087.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
               imageAlt: "Brynn Bailey negotiating contract terms with clients"
             },
             {
               title: "Closing Support",
               description: "On-site management for home inspections and thorough final walk-throughs.",
-              imageSrc: "https://img.b2bpic.net/free-photo/business-people-working-together_23-2148826968.jpg",
+              imageSrc: "https://images.pexels.com/photos/8052271/pexels-photo-8052271.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
               imageAlt: "Brynn Bailey closing support and escrow management"
             },
             {
               title: "Relocation Help",
               description: "Trusted local contacts for inter-island shipping, moving, and settling in.",
-              imageSrc: "https://img.b2bpic.net/free-photo/photorealistic-wooden-house-with-timber-structure_23-2151302632.jpg?_wi=1",
+              imageSrc: "https://img.b2bpic.net/free-photo/patio-balcony-with-chair-around-sea-ocean-view_74190-6863.jpg",
               imageAlt: "Hawaii luxury home relocation"
             },
             {
               title: "Concierge Care",
               description: "Full service property care and guidance for mainland and local clients.",
-              imageSrc: "https://img.b2bpic.net/free-photo/close-up-positive-executive-work_1098-519.jpg?_wi=1",
+              imageSrc: "https://images.pexels.com/photos/14156490/pexels-photo-14156490.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
               imageAlt: "Brynn Bailey, REALTOR® Concierge Care"
             }
           ]}
-          imageSrc="https://img.b2bpic.net/free-photo/close-up-positive-executive-work_1098-519.jpg?_wi=2"
+          imageSrc="https://images.pexels.com/photos/8469937/pexels-photo-8469937.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
           imageAlt="Brynn Bailey REALTOR® executive portrait"
           cta={{
             text: "Contact Brynn",
@@ -156,7 +156,7 @@ export default function HomePage() {
               role: "Big Island Buyers"
             }
           ]}
-          imageSrc="https://img.b2bpic.net/free-photo/front-view-real-estate-agent-working_23-2150322086.jpg?_wi=3"
+          imageSrc="https://images.pexels.com/photos/7937690/pexels-photo-7937690.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
           imageAlt="Brynn Bailey REALTOR® working with clients"
         />
       </div>
