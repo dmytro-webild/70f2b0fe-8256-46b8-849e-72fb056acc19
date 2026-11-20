@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { MapPin, Bed, Bath, Square, ArrowUpRight, Tag, CheckCircle2 } from "lucide-react";
+import { MapPin, Bed, Bath, Square, ArrowUpRight, Tag, CheckCircle2, Camera } from "lucide-react";
 
 export type ListingItem = {
   id: string;
@@ -14,7 +14,9 @@ export type ListingItem = {
     sqft?: string;
     acres?: string;
   };
+  photoCount?: string;
   statusTag?: string;
+  listedBy?: string;
   imageSrc: string;
   imageAlt?: string;
   description: string;
@@ -32,94 +34,58 @@ export type ListingsTabbedSectionProps = {
 };
 
 export default function ListingsTabbedSection({
-  title = "Featured Island Properties",
+  title = "Brynn Bailey’s Transactions",
   script = "Properties",
-  subtitle = "Explore curated luxury homes, oceanfront estates, and resort residences across Hawaii's Big Island.",
+  subtitle = "Explore current active listings and featured transactions represented by Brynn Bailey on the Big Island.",
   categories = ["All Listings", "Oceanfront & Luxury", "Resort Communities", "Island Estates"],
   listings = [
     {
       id: "listing-1",
-      title: "Kohala Coast Oceanfront Estate",
-      location: "Kuki'o / Kohala Coast, HI",
-      price: "$8,950,000",
+      title: "78-7079 Holuaki Loop",
+      location: "Kailua-Kona, HI 96740",
+      price: "$1,950,000",
       category: "Oceanfront & Luxury",
-      specs: { beds: 5, baths: 6.5, sqft: "6,200" },
-      statusTag: "Active Listing",
+      specs: { beds: 3, baths: 3, sqft: "1,887", acres: "0.13" },
+      photoCount: "3/25",
+      statusTag: "Virtual Tour",
+      listedBy: "Listed By Compass",
       imageSrc: "https://img.b2bpic.net/free-photo/patio-balcony-with-chair-around-sea-ocean-view_74190-6863.jpg?_wi=1",
-      imageAlt: "Kohala Coast Oceanfront Estate with ocean views",
-      description: "Spectacular contemporary oceanfront estate with seamless indoor-outdoor lanai living, infinity lap pool, and panoramic sunset views over the Pacific.",
-      features: ["Private Lanai", "Infinity Lap Pool", "Ocean Sunset Views"],
+      imageAlt: "78-7079 Holuaki Loop, Kailua-Kona, HI 96740",
+      description: "Exceptional 3 bedroom, 3 bathroom residence featuring 1,887 sqft of island living on a 0.13-acre lot with interactive virtual tour.",
+      features: ["Listed By Compass", "Virtual Tour", "0.13 Acres"],
       featured: true,
     },
     {
       id: "listing-2",
-      title: "Kona Cliffside Luxury Villa",
-      location: "Keauhou / Kailua-Kona, HI",
-      price: "$5,400,000",
-      category: "Oceanfront & Luxury",
-      specs: { beds: 4, baths: 4.5, sqft: "4,800" },
-      statusTag: "Exclusive",
-      imageSrc: "https://img.b2bpic.net/free-photo/nature-summer-travel-beach-luxury_1203-4812.jpg",
-      imageAlt: "Kona Cliffside Luxury Villa overlooking ocean",
-      description: "Architectural masterpiece positioned above Keauhou Bay featuring custom teak details, private ocean balcony, and resort amenities.",
-      features: ["Cliffside Position", "Custom Teak Details", "Teak Lanai"],
-      featured: false,
+      title: "75-5813 Nani Kailua Place",
+      location: "Kailua-Kona, HI 96740",
+      price: "$1,099,000",
+      category: "Island Estates",
+      specs: { beds: 3, baths: 2, sqft: "1,620", acres: "0.35" },
+      photoCount: "1/30",
+      statusTag: "Open: 11/21 09:00AM - 11:30AM",
+      listedBy: "Listed By Compass",
+      imageSrc: "https://img.b2bpic.net/free-photo/beautiful-tropical-coconut-palm-tree-with-chair-around-beach-sea-ocean-with-white-cloud-blue-sky_74190-13652.jpg?_wi=1",
+      imageAlt: "75-5813 Nani Kailua Place, Kailua-Kona, HI 96740",
+      description: "Spacious Kailua-Kona residence featuring 3 bedrooms, 2 bathrooms, 1,620 sqft, and an expansive 0.35-acre lot with open house tour.",
+      features: ["Listed By Compass", "Open: 11/21 9-11:30AM", "0.35 Acres"],
+      featured: true,
     },
     {
       id: "listing-3",
-      title: "Mauna Lani Resort Residence",
-      location: "Mauna Lani Resort, HI",
-      price: "$3,250,000",
+      title: "78-7190 Holua At Mauna Loa, Unit 55",
+      location: "Kailua-Kona, HI 96740",
+      price: "$575,000",
       category: "Resort Communities",
-      specs: { beds: 3, baths: 3.5, sqft: "3,100" },
+      specs: { beds: 3, baths: 3, sqft: "1,504" },
+      photoCount: "4/20",
       statusTag: "Active Listing",
-      imageSrc: "https://img.b2bpic.net/free-photo/beautiful-tropical-coconut-palm-tree-with-chair-around-beach-sea-ocean-with-white-cloud-blue-sky_74190-13652.jpg?_wi=1",
-      imageAlt: "Mauna Lani Resort Residence near beach club",
-      description: "Gated luxury condo-villa overlooking championship golf fairways with private beach club access and concierge property management.",
-      features: ["Golf Course View", "Beach Club Access", "Gated Security"],
-      featured: true,
-    },
-    {
-      id: "listing-4",
-      title: "Waikoloa Beach Modern Condo",
-      location: "Waikoloa Beach Resort, HI",
-      price: "$1,890,000",
-      category: "Resort Communities",
-      specs: { beds: 2, baths: 2, sqft: "1,750" },
-      statusTag: "Just Listed",
+      listedBy: "Listed By Compass",
       imageSrc: "https://img.b2bpic.net/free-photo/interior-space-decorated-boho-style_23-2150771513.jpg?_wi=1",
-      imageAlt: "Waikoloa Beach Modern Condo luxury interior",
-      description: "Turnkey luxury resort home with gourmet kitchen, expansive covered terrace, and proven vacation rental potential.",
-      features: ["Turnkey Furnished", "Covered Terrace", "Resort Pool"],
-      featured: false,
-    },
-    {
-      id: "listing-5",
-      title: "Waimea Timber & Ranch Estate",
-      location: "Waimea / Kamuela, HI",
-      price: "$4,100,000",
-      category: "Island Estates",
-      specs: { beds: 4, baths: 4, sqft: "5,400", acres: "3.5" },
-      statusTag: "Active Listing",
-      imageSrc: "https://img.b2bpic.net/free-photo/photorealistic-wooden-house-with-timber-structure_23-2151302632.jpg",
-      imageAlt: "Waimea Timber & Ranch Estate sanctuary",
-      description: "Custom timber-framed upcountry sanctuary with expansive pasture views, fireplace-lit great room, and mountain breezes.",
-      features: ["3.5 Acre Lot", "Timber Construction", "Mountain Views"],
+      imageAlt: "78-7190 Holua At Mauna Loa, Unit 55, Kailua-Kona, HI 96740",
+      description: "Desirable 3 bedroom, 3 bathroom resort condo offering 1,504 sqft of turn-key coastal living at Holua At Mauna Loa.",
+      features: ["Listed By Compass", "Unit 55", "1,504 Sqft"],
       featured: true,
-    },
-    {
-      id: "listing-6",
-      title: "Holualoa Coffee Belt Sanctuary",
-      location: "Holualoa / Kona Coffee Belt, HI",
-      price: "$2,750,000",
-      category: "Island Estates",
-      specs: { beds: 3, baths: 3, sqft: "3,200", acres: "2.0" },
-      statusTag: "Under Contract",
-      imageSrc: "https://img.b2bpic.net/free-photo/park-view_93675-130008.jpg?_wi=1",
-      imageAlt: "Holualoa Coffee Belt Sanctuary tropical grounds",
-      description: "Tranquil hillside estate surrounded by native gardens and organic coffee trees, offering ocean views and total privacy.",
-      features: ["2.0 Acre Orchard", "Sunset Views", "Private Driveway"],
-      featured: false,
     },
   ],
   contactHref = "#contact-plum-form",
@@ -217,7 +183,7 @@ export default function ListingsTabbedSection({
                 className="card group flex flex-col justify-between bg-card border border-border/80 overflow-hidden hover:border-primary/50 transition-all duration-300"
               >
                 <div>
-                  {/* Image & Status Badge */}
+                  {/* Image & Status Badges */}
                   <div className="relative aspect-[16/10] overflow-hidden bg-muted">
                     <img
                       src={item.imageSrc}
@@ -225,19 +191,36 @@ export default function ListingsTabbedSection({
                       className="size-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30 opacity-80 group-hover:opacity-60 transition-opacity" />
 
-                    {item.statusTag && (
-                      <span className="absolute top-4 left-4 bg-background/90 backdrop-blur-md text-foreground border border-border px-3 py-1 rounded-full text-[length:var(--text-label)] uppercase font-mono tracking-[var(--label-tracking)]">
-                        {item.statusTag}
-                      </span>
-                    )}
+                    {/* Top Badges */}
+                    <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2 z-10 flex-wrap">
+                      <div className="flex items-center gap-1.5 flex-wrap">
+                        {item.photoCount && (
+                          <span className="bg-black/70 backdrop-blur-md text-white border border-white/20 px-2.5 py-1 rounded-full text-[length:var(--text-label)] font-mono tracking-wider flex items-center gap-1">
+                            <Camera className="size-3 text-primary-foreground" />
+                            {item.photoCount}
+                          </span>
+                        )}
+                        {item.listedBy && (
+                          <span className="bg-background/90 backdrop-blur-md text-foreground border border-border/80 px-2.5 py-1 rounded-full text-[length:var(--text-label)] uppercase font-mono tracking-[var(--label-tracking)]">
+                            {item.listedBy}
+                          </span>
+                        )}
+                      </div>
 
-                    <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between text-white">
+                      {item.statusTag && item.statusTag !== item.listedBy && (
+                        <span className="bg-primary/90 backdrop-blur-md text-primary-foreground px-2.5 py-1 rounded-full text-[length:var(--text-label)] uppercase font-mono tracking-[var(--label-tracking)] font-medium">
+                          {item.statusTag}
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between text-white z-10">
                       <span className="font-[family-name:var(--font-heading)] text-[length:var(--text-h2)] font-normal tracking-tight">
                         {item.price}
                       </span>
-                      <span className="text-[length:var(--text-label)] uppercase font-mono bg-black/40 backdrop-blur-sm px-2.5 py-1 rounded-full border border-white/20">
+                      <span className="text-[length:var(--text-label)] uppercase font-mono bg-black/50 backdrop-blur-sm px-2.5 py-1 rounded-full border border-white/20">
                         {item.category}
                       </span>
                     </div>
@@ -260,7 +243,7 @@ export default function ListingsTabbedSection({
                     </p>
 
                     {/* Specs Row */}
-                    <div className="flex items-center gap-4 py-3 border-y border-border/60 text-[length:var(--text-small)] text-foreground font-mono">
+                    <div className="flex items-center gap-4 py-3 border-y border-border/60 text-[length:var(--text-small)] text-foreground font-mono flex-wrap">
                       {item.specs.beds && (
                         <div className="flex items-center gap-1.5">
                           <Bed className="size-4 text-muted-foreground" />

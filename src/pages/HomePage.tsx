@@ -32,9 +32,9 @@ export default function HomePage() {
 
       <div id="listings" data-webild-section="ListingsTabbedSection" data-webild-section-id="ListingsTabbedSection-1" data-section="listings">
         <ListingsTabbedSection
-          title="Featured Island Properties"
+          title="Brynn Bailey’s Transactions"
           script="Listings"
-          subtitle="Explore handpicked luxury estates, oceanfront villas, and resort residences across Kohala, Kona, and Waimea."
+          subtitle="Explore current active listings and property transactions represented by Brynn Bailey on Hawaii's Big Island."
         />
       </div>
 
