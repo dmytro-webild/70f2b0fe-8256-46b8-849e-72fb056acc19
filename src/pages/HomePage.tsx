@@ -72,7 +72,7 @@ export default function HomePage() {
               imageAlt: "Brynn Bailey, REALTOR® Concierge Care"
             }
           ]}
-          imageSrc="https://images.pexels.com/photos/8469937/pexels-photo-8469937.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+          imageSrc="https://images.pexels.com/photos/8469937/pexels-photo-8469937.jpeg?auto=compress&cs=tinysrgb&h=650&w=940&_wi=1"
           imageAlt="Brynn Bailey REALTOR® executive portrait"
           cta={{
             text: "Contact Brynn",
@@ -201,7 +201,7 @@ export default function HomePage() {
             "Rent"
           ]}
           submitText="Send Message"
-          imageSrc="https://images.pexels.com/photos/8469937/pexels-photo-8469937.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+          imageSrc="https://images.pexels.com/photos/8469937/pexels-photo-8469937.jpeg?auto=compress&cs=tinysrgb&h=650&w=940&_wi=2"
           imageAlt="Brynn Bailey, REALTOR® | Compass Big Island"
           labels={{
             firstName: "First Name",
