@@ -193,23 +193,39 @@ export default function HomePage() {
 
       <div id="contact-plum-form" data-webild-section="ContactPlumForm" data-webild-section-id="ContactPlumForm-1" data-section="contact-plum-form">
         <ContactPlumForm
-          title="Connect with Brynn"
+          title="Work with Brynn Bailey"
           script="Aloha"
           options={[
-            "Buying a home",
-            "Selling a property",
-            "Relocating to Hawaii"
+            "Sell",
+            "Buy",
+            "Rent"
           ]}
           submitText="Send Message"
+          imageSrc="https://images.pexels.com/photos/8469937/pexels-photo-8469937.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+          imageAlt="Brynn Bailey, REALTOR® | Compass Big Island"
           labels={{
-            name: "Your Name",
-            email: "Email Address",
-            enquiry: "Interest Area",
-            message: "Your Message",
+            firstName: "First Name",
+            lastName: "Last Name",
+            email: "Email",
+            phone: "Phone",
+            interest: "I am interested in:",
+            message: "Message",
             sending: "Sending...",
             sent: "Sent!",
             thanks: "Mahalo! Brynn will be in touch shortly."
           }}
+          details={[
+            { label: "Direct Phone", value: "808-255-7512", href: "tel:8082557512" },
+            { label: "Email", value: "brynn.bailey@compass.com", href: "mailto:brynn.bailey@compass.com" },
+            { label: "License", value: "REALTOR® | RB-24267" },
+            { label: "Brokerage", value: "Compass Big Island" }
+          ]}
+          socialLinks={[
+            { name: "Brynn’s Concierge Page", href: "https://www.compass.com/concierge", icon: "concierge" },
+            { name: "Facebook", href: "https://facebook.com", icon: "facebook" },
+            { name: "Instagram", href: "https://instagram.com", icon: "instagram" },
+            { name: "LinkedIn", href: "https://linkedin.com", icon: "linkedin" }
+          ]}
         />
       </div>
     </>
