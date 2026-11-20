@@ -158,7 +158,7 @@ function ListingCard({
               </button>
 
               {/* Dots Indicator */}
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/50 backdrop-blur-md border border-white/15">
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/50 backdrop-blur-md border border-white/15 max-w-[80%] overflow-x-auto scrollbar-none">
                 {Array.from({ length: totalPhotos }).map((_, dotIdx) => {
                   const isActive = dotIdx === currentPhotoIndex;
                   return (
@@ -170,7 +170,7 @@ function ListingCard({
                         e.stopPropagation();
                         setCurrentPhotoIndex(dotIdx);
                       }}
-                      className={`h-1.5 rounded-full transition-all duration-300 ${
+                      className={`shrink-0 h-1.5 rounded-full transition-all duration-300 ${
                         isActive ? "w-4 bg-primary-foreground" : "w-1.5 bg-white/40 hover:bg-white/80"
                       }`}
                       aria-label={`Go to photo ${dotIdx + 1}`}
@@ -190,7 +190,7 @@ function ListingCard({
 
         {/* Thumbnail Gallery Strip - Allows selecting & editing each individual photo */}
         {photosList.length > 1 && (
-          <div className="px-3 py-2 bg-muted/40 border-b border-border/60 flex items-center gap-2 overflow-x-auto scrollbar-none">
+          <div className="px-3 py-2.5 bg-muted/40 border-b border-border/60 flex items-center gap-2 overflow-x-auto scrollbar-none">
             {photosList.map((photoUrl, idx) => {
               const isSelected = idx === currentPhotoIndex;
               return (
@@ -204,8 +204,8 @@ function ListingCard({
                   }}
                   className={`relative shrink-0 size-12 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
                     isSelected
-                      ? "border-primary ring-2 ring-primary/40 scale-105"
-                      : "border-transparent opacity-70 hover:opacity-100"
+                      ? "border-primary ring-2 ring-primary/40 scale-105 z-10"
+                      : "border-transparent opacity-75 hover:opacity-100"
                   }`}
                   title={`Photo ${idx + 1}`}
                   aria-label={`Select photo ${idx + 1}`}
@@ -216,6 +216,9 @@ function ListingCard({
                     className="size-full object-cover"
                     loading="lazy"
                   />
+                  <span className="absolute bottom-0.5 right-0.5 bg-black/75 text-[9px] text-white px-1 py-0.2 rounded font-mono leading-none">
+                    {idx + 1}
+                  </span>
                 </button>
               );
             })}
@@ -323,6 +326,24 @@ export default function ListingsTabbedSection({
         "https://images.pexels.com/photos/6965499/pexels-photo-6965499.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
         "https://images.pexels.com/photos/9394297/pexels-photo-9394297.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
         "https://images.pexels.com/photos/4321535/pexels-photo-4321535.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/15516328/pexels-photo-15516328.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/40895087/pexels-photo-40895087.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/7641834/pexels-photo-7641834.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/6297086/pexels-photo-6297086.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/34710864/pexels-photo-34710864.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/8469937/pexels-photo-8469937.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/7937690/pexels-photo-7937690.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/31908808/pexels-photo-31908808.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/14156490/pexels-photo-14156490.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "https://images.pexels.com/photos/3445683/pexels-photo-3445683.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "https://images.pexels.com/photos/1388030/pexels-photo-1388030.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "https://images.pexels.com/photos/39190674/pexels-photo-39190674.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/16671106/pexels-photo-16671106.jpeg?auto=compress&cs=tinysrgb&h=650&w=940&p=22",
+        "https://images.pexels.com/photos/6001883/pexels-photo-6001883.jpeg?auto=compress&cs=tinysrgb&h=650&w=940&p=23",
+        "https://images.pexels.com/photos/7464676/pexels-photo-7464676.jpeg?auto=compress&cs=tinysrgb&h=650&w=940&p=24",
+        "https://images.pexels.com/photos/8052271/pexels-photo-8052271.jpeg?auto=compress&cs=tinysrgb&h=650&w=940&p=25",
       ],
       imageAlt: "78-7079 Holuaki Loop luxury oceanview home in Kailua-Kona",
       description: "Exceptional 3 bedroom, 3 bathroom residence featuring 1,887 sqft of island living on a 0.13-acre lot with interactive virtual tour.",
@@ -349,6 +370,29 @@ export default function ListingsTabbedSection({
         "https://images.pexels.com/photos/34710864/pexels-photo-34710864.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
         "https://images.pexels.com/photos/8469937/pexels-photo-8469937.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
         "https://images.pexels.com/photos/7937690/pexels-photo-7937690.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/16671106/pexels-photo-16671106.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/6001883/pexels-photo-6001883.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/7464676/pexels-photo-7464676.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/8052271/pexels-photo-8052271.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/6965499/pexels-photo-6965499.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/9394297/pexels-photo-9394297.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/4321535/pexels-photo-4321535.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/31908808/pexels-photo-31908808.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/14156490/pexels-photo-14156490.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "https://images.pexels.com/photos/3445683/pexels-photo-3445683.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "https://images.pexels.com/photos/1388030/pexels-photo-1388030.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "https://images.pexels.com/photos/39190674/pexels-photo-39190674.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/15516328/pexels-photo-15516328.jpeg?auto=compress&cs=tinysrgb&h=650&w=940&p=22",
+        "https://images.pexels.com/photos/40895087/pexels-photo-40895087.jpeg?auto=compress&cs=tinysrgb&h=650&w=940&p=23",
+        "https://images.pexels.com/photos/7641834/pexels-photo-7641834.jpeg?auto=compress&cs=tinysrgb&h=650&w=940&p=24",
+        "https://images.pexels.com/photos/6297086/pexels-photo-6297086.jpeg?auto=compress&cs=tinysrgb&h=650&w=940&p=25",
+        "https://images.pexels.com/photos/34710864/pexels-photo-34710864.jpeg?auto=compress&cs=tinysrgb&h=650&w=940&p=26",
+        "https://images.pexels.com/photos/8469937/pexels-photo-8469937.jpeg?auto=compress&cs=tinysrgb&h=650&w=940&p=27",
+        "https://images.pexels.com/photos/7937690/pexels-photo-7937690.jpeg?auto=compress&cs=tinysrgb&h=650&w=940&p=28",
+        "https://images.pexels.com/photos/16671106/pexels-photo-16671106.jpeg?auto=compress&cs=tinysrgb&h=650&w=940&p=29",
+        "https://images.pexels.com/photos/6001883/pexels-photo-6001883.jpeg?auto=compress&cs=tinysrgb&h=650&w=940&p=30",
       ],
       imageAlt: "75-5813 Nani Kailua Place single family home in Kailua-Kona",
       description: "Spacious Kailua-Kona residence featuring 3 bedrooms, 2 bathrooms, 1,620 sqft, and an expansive 0.35-acre lot with open house tour.",
@@ -375,6 +419,19 @@ export default function ListingsTabbedSection({
         "https://images.pexels.com/photos/1388030/pexels-photo-1388030.jpeg?auto=compress&cs=tinysrgb&w=1600",
         "https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=1600",
         "https://images.pexels.com/photos/6001883/pexels-photo-6001883.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/16671106/pexels-photo-16671106.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/7464676/pexels-photo-7464676.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/8052271/pexels-photo-8052271.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/6965499/pexels-photo-6965499.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/9394297/pexels-photo-9394297.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/4321535/pexels-photo-4321535.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/15516328/pexels-photo-15516328.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/40895087/pexels-photo-40895087.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/7641834/pexels-photo-7641834.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/6297086/pexels-photo-6297086.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/34710864/pexels-photo-34710864.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/8469937/pexels-photo-8469937.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://images.pexels.com/photos/7937690/pexels-photo-7937690.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
       ],
       imageAlt: "78-7190 Holua At Mauna Loa Unit 55 resort condo in Kailua-Kona",
       description: "Desirable 3 bedroom, 3 bathroom resort condo offering 1,504 sqft of turn-key coastal living at Holua At Mauna Loa.",
