@@ -44,8 +44,8 @@ const Quote = ({ item, reduce }: { item: Testimonial; reduce: boolean }) => {
 
 const TestimonialPhotoQuote = ({
   items = DEFAULT_ITEMS,
-  imageSrc = "https://images.pexels.com/photos/18222953/pexels-photo-18222953.jpeg?auto=compress&cs=tinysrgb&w=1600",
-  imageAlt = "White villa with bougainvillea",
+  imageSrc = "https://images.pexels.com/photos/7937690/pexels-photo-7937690.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  imageAlt = "Brynn Bailey REALTOR® working with clients",
   ariaLabel = "Guest words",
 }: TestimonialPhotoQuoteProps) => {
   const reduce = useReducedMotion() ?? false;
