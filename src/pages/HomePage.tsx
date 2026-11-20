@@ -1,4 +1,5 @@
 import HeroArchPoster from "@/components/sections/hero/HeroArchPoster";
+import ListingsTabbedSection from "@/components/sections/listings/ListingsTabbedSection";
 import ServicesNightList from "@/components/sections/features/ServicesNightList";
 import ProcessRouteLine from "@/components/sections/features/ProcessRouteLine";
 import MetricsPlusCount from "@/components/sections/metrics/MetricsPlusCount";
@@ -20,12 +21,20 @@ export default function HomePage() {
             "Local Market",
             "Island Life"
           ]}
-          imageSrc="https://img.b2bpic.net/free-photo/beautiful-asian-woman-posing-pink-bikini-swimsuit-pareo-terrace-tropical-villa-smiling-happy-vacation-thailnad-sexy-body-summer-style_285396-5818.jpg"
-          imageAlt="luxury villa with swimming pool"
+          imageSrc="https://img.b2bpic.net/free-photo/front-view-real-estate-agent-working_23-2150322086.jpg"
+          imageAlt="Brynn Bailey, REALTOR® | Compass Big Island"
           cta={{
-            text: "Browse Homes",
-            href: "#services"
+            text: "Browse Listings",
+            href: "#listings"
           }}
+        />
+      </div>
+
+      <div id="listings" data-webild-section="ListingsTabbedSection" data-webild-section-id="ListingsTabbedSection-1" data-section="listings">
+        <ListingsTabbedSection
+          title="Featured Island Properties"
+          script="Listings"
+          subtitle="Explore handpicked luxury estates, oceanfront villas, and resort residences across Kohala, Kona, and Waimea."
         />
       </div>
 
@@ -36,35 +45,35 @@ export default function HomePage() {
               title: "Targeted Search",
               description: "Custom filters and island listings aligned with your lifestyle criteria.",
               imageSrc: "https://img.b2bpic.net/free-photo/front-view-real-estate-agent-working_23-2150322086.jpg",
-              imageAlt: "real estate agent pointing at property"
+              imageAlt: "Brynn Bailey real estate targeted search"
             },
             {
               title: "Contract Terms",
               description: "Focused strategy to secure fair purchase terms and clear closing conditions.",
               imageSrc: "https://img.b2bpic.net/free-photo/business-meeting-sales-manager-couple-customers_1262-20845.jpg",
-              imageAlt: "business meeting with clients"
+              imageAlt: "Brynn Bailey negotiating contract terms with clients"
             },
             {
               title: "Closing Support",
               description: "On-site management for home inspections and thorough final walk-throughs.",
               imageSrc: "https://img.b2bpic.net/free-photo/business-people-working-together_23-2148826968.jpg",
-              imageAlt: "business people working together in office"
+              imageAlt: "Brynn Bailey closing support and escrow management"
             },
             {
               title: "Relocation Help",
               description: "Trusted local contacts for inter-island shipping, moving, and settling in.",
-              imageSrc: "https://img.b2bpic.net/free-photo/pretty-european-positive-smiling-woman-summer-flying-dress-natural-day-light-villa-terrace-enjoying-beautiful-vacation-outdoor-sofa-with-pillows-tropical_343596-1135.jpg",
-              imageAlt: "woman relaxing on villa terrace"
+              imageSrc: "https://img.b2bpic.net/free-photo/photorealistic-wooden-house-with-timber-structure_23-2151302632.jpg",
+              imageAlt: "Hawaii luxury home relocation"
             },
             {
               title: "Concierge Care",
               description: "Full service property care and guidance for mainland and local clients.",
               imageSrc: "https://img.b2bpic.net/free-photo/close-up-positive-executive-work_1098-519.jpg",
-              imageAlt: "portrait of a smiling businesswoman"
+              imageAlt: "Brynn Bailey, REALTOR® Concierge Care"
             }
           ]}
-          imageSrc="https://img.b2bpic.net/free-photo/nature-summer-travel-beach-luxury_1203-4812.jpg"
-          imageAlt="nature summer travel beach luxury"
+          imageSrc="https://img.b2bpic.net/free-photo/close-up-positive-executive-work_1098-519.jpg"
+          imageAlt="Brynn Bailey REALTOR® executive portrait"
           cta={{
             text: "Contact Brynn",
             href: "#contact-plum-form"
@@ -80,25 +89,25 @@ export default function HomePage() {
               title: "Kona Coast",
               description: "5 min",
               imageSrc: "https://img.b2bpic.net/free-photo/beautiful-tropical-coconut-palm-tree-with-chair-around-beach-sea-ocean-with-white-cloud-blue-sky_74190-13652.jpg",
-              imageAlt: "Beautiful tropical coconut palm tree with chair around beach sea ocean with white cloud on blue sky"
+              imageAlt: "Kona Coast beach ocean view"
             },
             {
               title: "Golf Resort",
               description: "12 min",
               imageSrc: "https://img.b2bpic.net/free-photo/photorealistic-wooden-house-with-timber-structure_23-2151302632.jpg",
-              imageAlt: "tropical beach house at sunset"
+              imageAlt: "Tropical beach house resort"
             },
             {
               title: "Town Center",
               description: "18 min",
               imageSrc: "https://img.b2bpic.net/free-photo/interior-space-decorated-boho-style_23-2150771513.jpg",
-              imageAlt: "modern living room with plants"
+              imageAlt: "Luxury living space interior"
             },
             {
               title: "Kona Airport",
               description: "25 min",
               imageSrc: "https://img.b2bpic.net/free-photo/park-view_93675-130008.jpg",
-              imageAlt: "lush tropical garden"
+              imageAlt: "Lush tropical grounds"
             }
           ]}
         />
@@ -137,18 +146,18 @@ export default function HomePage() {
         <TestimonialPhotoQuote
           items={[
             {
-              quote: "Brynn was the best! Super helpful, skilled, and negotiated a great deal on our home purchase.",
+              quote: "Brynn was THE BEST!! Super helpful, very knowledgeable, and negotiated a great deal for us on our purchase. I had a lot of questions since it was my first time purchasing a home and she was patient and responsive every time.",
               name: "Jessisita",
-              role: "First-time buyer"
+              role: "First-time Buyer"
             },
             {
-              quote: "Brynn is a fantastic realtor and hands down the best agent we have ever worked with in Hawaii.",
+              quote: "Brynn Bailey is a fantastic realtor, a one of a kind, hands down, the best real estate agent that we have ever worked with! Professional and knowledgeable about Big Island real estate.",
               name: "Richard & Todd",
-              role: "Big Island buyers"
+              role: "Big Island Buyers"
             }
           ]}
-          imageSrc="https://img.b2bpic.net/free-photo/patio-balcony-with-chair-around-sea-ocean-view_74190-6863.jpg"
-          imageAlt="Patio or Balcony with chair around sea and ocean view"
+          imageSrc="https://img.b2bpic.net/free-photo/front-view-real-estate-agent-working_23-2150322086.jpg"
+          imageAlt="Brynn Bailey REALTOR® working with clients"
         />
       </div>
 

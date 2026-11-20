@@ -12,6 +12,14 @@ export default function Layout() {
             text: "Get in Touch",
             href: "#contact-plum-form"
           }}
+          navItems={[
+            { name: "Listings", href: "#listings" },
+            { name: "Services", href: "#services" },
+            { name: "Buying Process", href: "#process" },
+            { name: "Testimonials", href: "#testimonial" },
+            { name: "FAQ", href: "#faq-plus-accordion" },
+            { name: "Contact", href: "#contact-plum-form" }
+          ]}
         />
       </header>
       <main className="flex-grow" data-button="outline" data-card="frame" data-pattern="none">
@@ -47,6 +55,10 @@ export default function Layout() {
             {
               title: "Explore",
               links: [
+                {
+                  text: "Featured Listings",
+                  href: "#listings"
+                },
                 {
                   text: "Client Results",
                   href: "#metrics-plus-count"
