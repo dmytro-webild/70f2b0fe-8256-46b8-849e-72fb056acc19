@@ -21,7 +21,7 @@ export default function HomePage() {
             "Local Market",
             "Island Life"
           ]}
-          imageSrc="https://img.b2bpic.net/free-photo/front-view-real-estate-agent-working_23-2150322086.jpg"
+          imageSrc="https://img.b2bpic.net/free-photo/front-view-real-estate-agent-working_23-2150322086.jpg?_wi=1"
           imageAlt="Brynn Bailey, REALTOR® | Compass Big Island"
           cta={{
             text: "Browse Listings",
@@ -44,7 +44,7 @@ export default function HomePage() {
             {
               title: "Targeted Search",
               description: "Custom filters and island listings aligned with your lifestyle criteria.",
-              imageSrc: "https://img.b2bpic.net/free-photo/front-view-real-estate-agent-working_23-2150322086.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/front-view-real-estate-agent-working_23-2150322086.jpg?_wi=2",
               imageAlt: "Brynn Bailey real estate targeted search"
             },
             {
@@ -62,17 +62,17 @@ export default function HomePage() {
             {
               title: "Relocation Help",
               description: "Trusted local contacts for inter-island shipping, moving, and settling in.",
-              imageSrc: "https://img.b2bpic.net/free-photo/photorealistic-wooden-house-with-timber-structure_23-2151302632.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/photorealistic-wooden-house-with-timber-structure_23-2151302632.jpg?_wi=1",
               imageAlt: "Hawaii luxury home relocation"
             },
             {
               title: "Concierge Care",
               description: "Full service property care and guidance for mainland and local clients.",
-              imageSrc: "https://img.b2bpic.net/free-photo/close-up-positive-executive-work_1098-519.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/close-up-positive-executive-work_1098-519.jpg?_wi=1",
               imageAlt: "Brynn Bailey, REALTOR® Concierge Care"
             }
           ]}
-          imageSrc="https://img.b2bpic.net/free-photo/close-up-positive-executive-work_1098-519.jpg"
+          imageSrc="https://img.b2bpic.net/free-photo/close-up-positive-executive-work_1098-519.jpg?_wi=2"
           imageAlt="Brynn Bailey REALTOR® executive portrait"
           cta={{
             text: "Contact Brynn",
@@ -94,7 +94,7 @@ export default function HomePage() {
             {
               title: "Golf Resort",
               description: "12 min",
-              imageSrc: "https://img.b2bpic.net/free-photo/photorealistic-wooden-house-with-timber-structure_23-2151302632.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/photorealistic-wooden-house-with-timber-structure_23-2151302632.jpg?_wi=2",
               imageAlt: "Tropical beach house resort"
             },
             {
@@ -156,7 +156,7 @@ export default function HomePage() {
               role: "Big Island Buyers"
             }
           ]}
-          imageSrc="https://img.b2bpic.net/free-photo/front-view-real-estate-agent-working_23-2150322086.jpg"
+          imageSrc="https://img.b2bpic.net/free-photo/front-view-real-estate-agent-working_23-2150322086.jpg?_wi=3"
           imageAlt="Brynn Bailey REALTOR® working with clients"
         />
       </div>
