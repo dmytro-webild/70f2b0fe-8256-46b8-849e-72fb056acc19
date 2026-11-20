@@ -62,7 +62,7 @@ export default function HomePage() {
             {
               title: "Relocation Help",
               description: "Trusted local contacts for inter-island shipping, moving, and settling in.",
-              imageSrc: "https://img.b2bpic.net/free-photo/patio-balcony-with-chair-around-sea-ocean-view_74190-6863.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/patio-balcony-with-chair-around-sea-ocean-view_74190-6863.jpg?_wi=2",
               imageAlt: "Hawaii luxury home relocation"
             },
             {
@@ -88,7 +88,7 @@ export default function HomePage() {
             {
               title: "Kona Coast",
               description: "5 min",
-              imageSrc: "https://img.b2bpic.net/free-photo/beautiful-tropical-coconut-palm-tree-with-chair-around-beach-sea-ocean-with-white-cloud-blue-sky_74190-13652.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/beautiful-tropical-coconut-palm-tree-with-chair-around-beach-sea-ocean-with-white-cloud-blue-sky_74190-13652.jpg?_wi=2",
               imageAlt: "Kona Coast beach ocean view"
             },
             {
@@ -100,13 +100,13 @@ export default function HomePage() {
             {
               title: "Town Center",
               description: "18 min",
-              imageSrc: "https://img.b2bpic.net/free-photo/interior-space-decorated-boho-style_23-2150771513.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/interior-space-decorated-boho-style_23-2150771513.jpg?_wi=2",
               imageAlt: "Luxury living space interior"
             },
             {
               title: "Kona Airport",
               description: "25 min",
-              imageSrc: "https://img.b2bpic.net/free-photo/park-view_93675-130008.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/park-view_93675-130008.jpg?_wi=2",
               imageAlt: "Lush tropical grounds"
             }
           ]}
