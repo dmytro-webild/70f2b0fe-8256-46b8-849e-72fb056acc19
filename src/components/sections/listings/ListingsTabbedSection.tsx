@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence, type PanInfo } from "motion/react";
+import Media, { MotionMedia } from "@/components/kit/Media";
 import {
   MapPin,
   Bed,
@@ -56,7 +57,7 @@ function ListingCard({
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
 
   const photosList = item.photos && item.photos.length > 0 ? item.photos : [item.imageSrc];
-  const totalPhotos = item.totalPhotos || photosList.length;
+  const totalPhotos = photosList.length;
 
   const currentImageSrc = photosList[currentPhotoIndex % photosList.length];
 
@@ -98,7 +99,7 @@ function ListingCard({
           }}
         >
           <AnimatePresence mode="wait">
-            <motion.img
+            <MotionMedia
               key={currentPhotoIndex}
               src={currentImageSrc}
               alt={`${item.imageAlt || item.title} - Photo ${currentPhotoIndex + 1}`}
@@ -106,7 +107,7 @@ function ListingCard({
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0.7, scale: 0.98 }}
               transition={{ duration: 0.2 }}
-              className="size-full object-cover transition-transform duration-500 group-hover/carousel:scale-105 pointer-events-none"
+              className="size-full object-cover transition-transform duration-500 group-hover/carousel:scale-105"
               loading="lazy"
             />
           </AnimatePresence>
@@ -157,14 +158,9 @@ function ListingCard({
               </button>
 
               {/* Dots Indicator */}
-              <div className="absolute bottom-11 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/50 backdrop-blur-md border border-white/15">
-                {Array.from({ length: Math.min(totalPhotos, 8) }).map((_, dotIdx) => {
-                  const maxDots = Math.min(totalPhotos, 8);
-                  const activeDotIndex =
-                    totalPhotos > maxDots
-                      ? Math.floor((currentPhotoIndex / (totalPhotos - 1)) * (maxDots - 1))
-                      : currentPhotoIndex;
-                  const isActive = dotIdx === activeDotIndex;
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/50 backdrop-blur-md border border-white/15">
+                {Array.from({ length: totalPhotos }).map((_, dotIdx) => {
+                  const isActive = dotIdx === currentPhotoIndex;
                   return (
                     <button
                       key={dotIdx}
@@ -172,11 +168,7 @@ function ListingCard({
                       onClick={(e) => {
                         e.preventDefault();
                         e.stopPropagation();
-                        if (totalPhotos <= maxDots) {
-                          setCurrentPhotoIndex(dotIdx);
-                        } else {
-                          setCurrentPhotoIndex(Math.round((dotIdx / (maxDots - 1)) * (totalPhotos - 1)));
-                        }
+                        setCurrentPhotoIndex(dotIdx);
                       }}
                       className={`h-1.5 rounded-full transition-all duration-300 ${
                         isActive ? "w-4 bg-primary-foreground" : "w-1.5 bg-white/40 hover:bg-white/80"
@@ -189,15 +181,46 @@ function ListingCard({
             </>
           )}
 
-          <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between text-white z-10 pointer-events-none">
+          <div className="absolute bottom-3 left-3 flex items-end justify-between text-white z-10 pointer-events-none">
             <span className="font-[family-name:var(--font-heading)] text-[length:var(--text-h2)] font-normal tracking-tight drop-shadow-sm">
               {item.price}
             </span>
-            <span className="text-[length:var(--text-label)] uppercase font-mono bg-black/50 backdrop-blur-sm px-2.5 py-1 rounded-full border border-white/20">
-              {item.category}
-            </span>
           </div>
         </motion.div>
+
+        {/* Thumbnail Gallery Strip - Allows selecting & editing each individual photo */}
+        {photosList.length > 1 && (
+          <div className="px-3 py-2 bg-muted/40 border-b border-border/60 flex items-center gap-2 overflow-x-auto scrollbar-none">
+            {photosList.map((photoUrl, idx) => {
+              const isSelected = idx === currentPhotoIndex;
+              return (
+                <button
+                  key={`${item.id}-thumb-${idx}`}
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    setCurrentPhotoIndex(idx);
+                  }}
+                  className={`relative shrink-0 size-12 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
+                    isSelected
+                      ? "border-primary ring-2 ring-primary/40 scale-105"
+                      : "border-transparent opacity-70 hover:opacity-100"
+                  }`}
+                  title={`Photo ${idx + 1}`}
+                  aria-label={`Select photo ${idx + 1}`}
+                >
+                  <Media
+                    src={photoUrl}
+                    alt={`${item.title} photo ${idx + 1}`}
+                    className="size-full object-cover"
+                    loading="lazy"
+                  />
+                </button>
+              );
+            })}
+          </div>
+        )}
 
         {/* Body Content */}
         <div className="p-6 flex flex-col gap-4">
