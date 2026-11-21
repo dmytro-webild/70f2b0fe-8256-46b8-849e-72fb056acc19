@@ -88,7 +88,7 @@ export default function HomePage() {
             {
               title: "Kona Coast",
               description: "5 min",
-              imageSrc: "https://images.pexels.com/photos/6965499/pexels-photo-6965499.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              imageSrc: "https://storage.googleapis.com/webild/users/user_3MABZ2Fuimw4C3QaCw6PGNJHuIK/uploaded-1795291622961-tc6azyew.webp",
               imageAlt: "Kona Coast beach ocean view"
             },
             {
