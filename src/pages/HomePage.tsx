@@ -56,7 +56,7 @@ export default function HomePage() {
             {
               title: "Closing Support",
               description: "On-site management for home inspections and thorough final walk-throughs.",
-              imageSrc: "https://images.pexels.com/photos/8052271/pexels-photo-8052271.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              imageSrc: "https://storage.googleapis.com/webild/users/user_3MABZ2Fuimw4C3QaCw6PGNJHuIK/uploaded-1795291593222-hby9irwo.webp",
               imageAlt: "Brynn Bailey closing support and escrow management"
             },
             {
