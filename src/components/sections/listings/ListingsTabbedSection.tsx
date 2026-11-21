@@ -317,9 +317,9 @@ export default function ListingsTabbedSection({
       photoCount: "1/25",
       statusTag: "Virtual Tour",
       listedBy: "Listed By Compass",
-      imageSrc: "https://images.pexels.com/photos/16671106/pexels-photo-16671106.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      imageSrc: "https://storage.googleapis.com/webild/users/user_3MABZ2Fuimw4C3QaCw6PGNJHuIK/uploaded-1795290722947-ncrs3rqg.webp",
       photos: [
-        "https://images.pexels.com/photos/16671106/pexels-photo-16671106.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "https://storage.googleapis.com/webild/users/user_3MABZ2Fuimw4C3QaCw6PGNJHuIK/uploaded-1795290722947-ncrs3rqg.webp",
         "https://images.pexels.com/photos/6001883/pexels-photo-6001883.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
         "https://images.pexels.com/photos/7464676/pexels-photo-7464676.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
         "https://images.pexels.com/photos/8052271/pexels-photo-8052271.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
