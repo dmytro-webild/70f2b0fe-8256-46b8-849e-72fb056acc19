@@ -62,7 +62,7 @@ export default function HomePage() {
             {
               title: "Relocation Help",
               description: "Trusted local contacts for inter-island shipping, moving, and settling in.",
-              imageSrc: "https://images.pexels.com/photos/7464676/pexels-photo-7464676.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              imageSrc: "https://storage.googleapis.com/webild/users/user_3MABZ2Fuimw4C3QaCw6PGNJHuIK/uploaded-1795291569289-oa82vblk.webp",
               imageAlt: "Hawaii luxury home relocation"
             },
             {
