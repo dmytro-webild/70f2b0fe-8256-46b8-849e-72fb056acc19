@@ -47,7 +47,7 @@ const Ring = ({ text, href }: { text: string; href: string }) => (
 
 const ServicesNightList = ({
   items = DEFAULT_ITEMS,
-  imageSrc = "https://images.pexels.com/photos/6001883/pexels-photo-6001883.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+  imageSrc = "https://storage.googleapis.com/webild/users/user_3MABZ2Fuimw4C3QaCw6PGNJHuIK/uploaded-1795290750914-g83mqoag.webp",
   imageAlt = "Brynn Bailey REALTOR® executive portrait",
   cta,
   ariaLabel,
